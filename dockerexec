@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Docker exec as current user
+docker exec -it --user $USER -e HOME=/home/$USER $@
