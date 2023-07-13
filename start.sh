@@ -26,7 +26,7 @@ pip install -e .
 python -m pytest tests/test_basic.py
 
 # All setup
-echo "You are all setup! Let's delete this file and commit the changes."
+echo "You are all setup! Let's delete this file and commit and push the changes."
 
 # Delete this file
 rm -- "$0"
