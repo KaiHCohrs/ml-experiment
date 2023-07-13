@@ -35,7 +35,7 @@ rm -- "$0"
 git add -A
 
 # Create an initial commit with the specified message
-git commit -m "-initial commit"
+git commit -m "Initial commit"
 
 # Push the changes to the remote repository
 git push
