@@ -13,3 +13,4 @@ Run start.sh
 - data: clean and raw subfolder and preprocessing
 - maybe a debug config
 - add a precommit hook for black (https://www.freecodecamp.org/news/github-super-linter/) and the unittests
+- job/slurm file
