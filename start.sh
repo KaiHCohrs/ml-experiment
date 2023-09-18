@@ -10,14 +10,15 @@ mv your_module_name/ "${new_repo_name}/"
 find "${new_repo_name}/" -type f -name "*.py" -print0 | xargs -0 sed -i "s/your_module_name/${new_repo_name}/g"
 find "scripts/" -type f -name "*.py" -exec sed -i "s/your_module_name/${new_repo_name}/g" {} \;
 
-# Substitute the name in setup.py file
+# Substitute the name in setup.py and environment.yml file
+sed -i "s/your_module_name/${new_repo_name}/g" environment.yml
 sed -i "s/your_module_name/${new_repo_name}/g" "setup.py"
 
 # Build the conda environment from environment.yml
 mamba env create -f environment.yml
 
 # Activate the conda environment
-conda activate ml-env
+conda activate ${new_repo_name}
 
 # Install the module in editable mode
 pip install -e .
