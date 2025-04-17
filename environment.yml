@@ -1,9 +1,13 @@
 name: your_module_name
 channels:
-  - defaults
+  - pytorch
+  - nvidia
   - conda-forge
+  - defaults
 dependencies:
-  - python=3.9  # Change this to desired Python version
+  - python=3.10
+  - pytorch
+  - cudatoolkit
   - ipython
   - notebook
   - matplotlib
@@ -19,3 +23,9 @@ dependencies:
   - black
   - flake8
   - pytest
+  - pip
+  - pip:
+    - jax
+    - jaxlib
+    - optax
+    - tqdm

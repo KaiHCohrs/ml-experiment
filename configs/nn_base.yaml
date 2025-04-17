@@ -1,0 +1,33 @@
+model_config:
+  model: NNModel
+  nn:
+    - 64
+    - 64
+  nonlinearity: ReLU
+  final_nonlinearity: Softplus
+  ensemble_size: 10
+
+dataset_config:
+  loader: base_loader
+  var_inputs:
+    - input_1
+    - input_2
+  var_targets:
+    - target
+  test_portion: 0.3
+  batch_size: 256
+  seed: 42
+
+trainer_config:
+  trainer: trainer_basic
+  device: cpu
+  lr_decay_factor: 0.5
+  lr_decay_steps: 5
+  lr_init: 0.001
+  max_iter: 200 
+  min_lr: 0.0000001
+  patience: 5
+  seed: args.seed
+  tolerance: 0.0001
+  track_training: true
+  weight_decay: 0
